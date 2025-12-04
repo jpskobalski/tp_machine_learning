@@ -49,13 +49,3 @@ El flujo de trabajo implementado en el notebook `tp_machine_learning-multi_model
     * CatBoost
 6.  Optimización de Hiperparámetros: Uso de `RandomizedSearchCV` y `GridSearchCV`.
 7.  Métrica de Selección: Se priorizó el F2-Score (que da más peso al *Recall* que a la *Precision*) para penalizar fuertemente los falsos negativos.
-
-### Resultados y Conclusiones
-Tras evaluar los distintos modelos y técnicas de calibración de probabilidades:
-
-* Modelo Seleccionado: Random Forest (con ajuste de hiperparámetros y umbral de decisión optimizado).
-
-Hallazgos principales:
-* El modelo Random Forest ofreció el mejor equilibrio y la mayor sensibilidad (*Recall*) en el set de prueba, logrando detectar la mayor cantidad de casos positivos reales.
-* Modelos como KNN mostraron un rendimiento inferior en la discriminación de la clase minoritaria.
-* Se experimentó con técnicas de calibración de probabilidades (Sigmoid/Isotonic), pero se descartaron para el modelo final ya que reducían la sensibilidad en favor de la precisión, lo cual es contraproducente para este caso de uso médico.
